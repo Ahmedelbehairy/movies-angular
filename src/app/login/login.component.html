@@ -1,0 +1,38 @@
+<div class="container px-0 h-100">
+    <div class="row text-center d-flex align-items-center h-100 justify-content-center">
+      <!-- login Form -->
+      <form [formGroup]="loginForm" class="w-50" (ngSubmit)="submitLoginForm(loginForm)">
+        <h1>LOGIN</h1>
+        <!--  email input -->
+        <div>
+          <label for="email"></label>
+          <input formControlName="email" type="email" placeholder="Your Email" name="email"
+            class=" text-center form-control">
+          <div *ngIf="loginForm.get('email')?.errors != null &&
+          loginForm.get('email')?.touched" class="alert alert-danger mt-2">
+            <p *ngIf="loginForm.get('email')?.errors?.['required']">
+              The email is required</p>
+            <p *ngIf="loginForm.get('email')?.errors?.['email']">
+              The email is required </p>
+          </div>
+        </div>
+        <!--  password input -->
+        <div>
+          <label for="password"></label>
+          <input formControlName="password" type="password" placeholder="Your Password" name="password"
+            class=" text-center form-control">
+          <div *ngIf="loginForm.get('password')?.errors != null &&
+          loginForm.get('password')?.touched" class="alert alert-danger mt-2">
+            <p *ngIf="loginForm.get('password')?.errors?.['required']">
+              The password is required</p>
+            <p *ngIf="loginForm.get('password')?.errors?.['pattern']">
+              Your password should start with capital letter and No less than 5 letters </p>
+          </div>
+        </div>
+        <!-- submit button -->
+        <div class="d-flex justify-content-end">
+          <button  [disabled]='loginForm.invalid' type="submit" class="btn btn-outline-primary mt-4">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>

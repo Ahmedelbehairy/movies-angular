@@ -1,0 +1,18 @@
+<div class="container-fluid px-0">
+  <div class="position-relative">
+    <!-- img of background -->
+    <img class="img-index w-100" src="../../assets/img/wp10628880.jpg" alt="">
+    <div class="position-absolute end-0 start-0 bottom-0  container">
+      <!-- type.js -->
+      <span class="fw-bold ms-3 h1 typed-element my-4">Top 20 Movies Right Now</span>
+      <!-- slider -->
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let slide of this.allMovies">
+            <ng-template carouselSlide [id]="slide.id">
+                <img  class="img-hover mt-3 px-1 rounded" [src]="imgPrefix + slide.poster_path" [alt]="slide.alt" [title]="slide.title">
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+    </div>
+  </div>
+</div>

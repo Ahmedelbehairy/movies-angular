@@ -1,0 +1,80 @@
+<app-bg></app-bg>
+<div class="container">
+  <div class="row mt-5">
+    <div class="after position-relative col-md-4 d-flex mb-5 flex-column justify-content-center">
+      <h2>All Movies</h2>
+      <h2>To Watch Right Now</h2>
+      <p class="text-secondary">All Movies To Watch Right Now</p>
+    </div>
+    <!-- all movies -->
+    <div *ngFor="let movie of allMovies" class="hover-div text-center my-2 col-md-2 position-relative">
+      <a [routerLink]="['/movies-details', movie.id]">
+          <img [src]="imgPrefix+movie.poster_path" class="rounded w-100" alt="">
+        <h3 class="h5 mt-4">{{movie.title}} </h3>
+        <div class="rounded position-absolute d-flex justify-content-center align-items-center top-0 end-0 bg-secondary">
+          {{movie.vote_average}}
+        </div>
+      </a>
+    </div>
+    <!-- popular movies -->
+    <div class="after position-relative col-md-4 d-flex mb-5 flex-column justify-content-center">
+      <h2>Popular Movies</h2>
+      <h2>To Watch Right Now</h2>
+      <p class="text-secondary">Popular Movies To Watch Right Now</p>
+    </div>
+    <div *ngFor="let movie of popularMovies" class="hover-div text-center my-2 col-md-2 position-relative">
+      <a [routerLink]="['/movies-details', movie.id]">
+        <img [src]="imgPrefix+movie.poster_path" class="rounded w-100" alt="">
+        <h3 class="h5 mt-4">{{movie.title}} </h3>
+        <div class="rounded position-absolute d-flex justify-content-center align-items-center top-0 end-0 bg-secondary">
+          {{movie.vote_average}}
+        </div>
+      </a>
+    </div>
+    <!-- top_rated movies -->
+    <div class="after position-relative col-md-4 d-flex mb-5 flex-column justify-content-center">
+      <h2>Top Rated Movies</h2>
+      <h2>To Watch Right Now</h2>
+      <p class="text-secondary">Top Rated Movies To Watch Right Now</p>
+    </div>
+    <div *ngFor="let movie of topRatedMovies" class="hover-div text-center my-2 col-md-2 position-relative">
+      <a [routerLink]="['/movies-details', movie.id]">
+        <img [src]="imgPrefix+movie.poster_path" class="rounded w-100" alt="">
+        <h3 class="h5 mt-4">{{movie.title}} </h3>
+        <div class="rounded position-absolute d-flex justify-content-center align-items-center top-0 end-0 bg-secondary">
+          {{movie.vote_average}}
+        </div>
+      </a>
+    </div>
+    <!-- trending movies -->
+    <div class="after position-relative col-md-4 d-flex mb-5 flex-column justify-content-center">
+      <h2>Trending Movies</h2>
+      <h2>To Watch Right Now</h2>
+      <p class="text-secondary">Trending Movies To Watch Right Now</p>
+    </div>
+    <div *ngFor="let movie of trendingMovies" class="hover-div text-center my-2 col-md-2 position-relative">
+      <a [routerLink]="['/movies-details', movie.id]">
+        <img [src]="imgPrefix+movie.poster_path" class="rounded w-100" alt="">
+        <h3 class="h5 mt-4">{{movie.title}} </h3>
+        <div class="rounded position-absolute d-flex justify-content-center align-items-center top-0 end-0 bg-secondary">
+          {{movie.vote_average}}
+        </div>
+        </a>
+    </div>
+    <!-- upcoming movies -->
+    <div class="after position-relative col-md-4 d-flex mb-5 flex-column justify-content-center">
+      <h2>Upcoming Movies</h2>
+      <h2>To Watch Right Now</h2>
+      <p class="text-secondary">Upcoming Movies To Watch Right Now</p>
+    </div>
+    <div *ngFor="let movie of upcomingMovies" class="hover-div text-center my-2 col-md-2 position-relative">
+      <a [routerLink]="['/movies-details', movie.id]">
+        <img [src]="imgPrefix+movie.poster_path" class="rounded w-100" alt="">
+        <h3 class="h5 mt-4">{{movie.title}} </h3>
+        <div class="rounded position-absolute d-flex justify-content-center align-items-center top-0 end-0 bg-secondary">
+          {{movie.vote_average}}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.bg-secondary {
+  width: 40px;
+  height: 45px;
+  transition: all .5s;
+}
+
+.after:after {
+  content: '';
+  position:absolute ;
+  width: 95%;
+  height: 2px;
+  bottom: 10%;
+  border-radius: 5px;
+  background-color: rgb(108,117,125);
+}
+.after:before {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  top: 10%;
+  border-radius: 5px;
+  background-color: rgb(108, 117, 125);
+}
+img {
+  transition: transform .5s;
+}
+img:hover
+{
+  transform: scale(1.15)
+}
+.hover-div:hover .bg-secondary {
+  height: 60px;
+  transition: all .5s;
+  top: -7% !important;
+  right:-5% !important;
+  color: red;
+}

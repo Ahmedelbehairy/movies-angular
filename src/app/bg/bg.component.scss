@@ -1,0 +1,10 @@
+.img-index {
+  z-index: -999;
+}
+.img-hover{
+  transition: transform .5s;
+}
+
+.img-hover:hover {
+  transform: scale(1.1)
+}
